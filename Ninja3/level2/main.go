@@ -5,5 +5,13 @@ import (
 )
 
 func main() {
-	fmt.Println("This is just another test")
+
+	for i := 65; i <= 90; i++ {
+		fmt.Println(i)
+		for j := 0; j <= 2; j++ {
+
+			fmt.Printf("%#U\n", i)
+
+		}
+	}
 }

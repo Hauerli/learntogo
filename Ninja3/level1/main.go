@@ -5,5 +5,9 @@ import (
 )
 
 func main() {
-	fmt.Println(" This is just a test!")
+
+	for i := 0; i < 10000; i++ {
+		fmt.Println(i)
+	}
+
 }
