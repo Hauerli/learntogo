@@ -4,11 +4,18 @@ import (
 	"fmt"
 )
 
+func main() {
 
-func main (){
+	x := 1988
 
-	for i: 1988; i <= 2018; i++{
-		fmt.Println(i)
+	for {
+
+		fmt.Println(x)
+		x++
+
+		if x == 2019 {
+			break
+		}
 	}
 
 }
