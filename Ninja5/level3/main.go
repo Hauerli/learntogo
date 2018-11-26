@@ -4,36 +4,37 @@ import (
 	"fmt"
 )
 
-type person struct {
-	first  string
-	last   string
-	favIce []string
+type vehicle struct {
+	doors int
+	color string
+}
+type truck struct {
+	vehicle
+	fourWheel bool
+}
+type sedan struct {
+	vehicle
+	luxury bool
 }
 
 func main() {
 
-	p1 := person{
-		first:  "Max",
-		last:   "Hauer",
-		favIce: []string{"Schoko", "Vanilla", "Stracciatella"},
+	t := truck{
+		vehicle: vehicle{
+			doors: 4,
+			color: "black",
+		},
+		fourWheel: true,
 	}
-	p2 := person{
-		first:  "Stephanie",
-		last:   "Hauer",
-		favIce: []string{"Haselnuss", "Erdbeer", "Cookie"},
+	s := sedan{
+		vehicle: vehicle{
+			doors: 6,
+			color: "green",
+		},
+		luxury: false,
 	}
 
-	m := map[string]person{
-		p1.first: p1,
-		p2.first: p2,
-	}
-
-	for _, v1 := range m {
-		fmt.Println(v1.first, " ", v1.last)
-		for _, v2 := range v1.favIce {
-			fmt.Println(v2)
-		}
-		fmt.Print("\n")
-	}
+	fmt.Println(t)
+	fmt.Println(s)
 
 }
